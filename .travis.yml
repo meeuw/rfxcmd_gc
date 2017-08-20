@@ -1,0 +1,23 @@
+language: python
+python:
+  - "2.7"
+
+before_install:
+    - sudo apt-get -qq update
+    - sudo apt-get install -y socat
+
+install:
+    - pip install git+https://github.com/meeuw/txrfxcom.git coverage pyserial codecov
+
+script:
+    - python rfxcom_emu.py
+
+after_success:
+  - codecov
+
+notifications:
+  webhooks:
+    urls:
+      - YOUR_WEBHOOK_URL
+    on_success: change
+    on_failure: always

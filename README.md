@@ -1,5 +1,8 @@
 # rfxcmd
 
+[![Build Status](https://travis-ci.org/meeuw/rfxcmd_gc.svg?branch=master)](https://travis-ci.org/meeuw/rfxcmd_gc)
+[![codecov](https://codecov.io/gh/meeuw/rfxcmd_gc/branch/master/graph/badge.svg)](https://codecov.io/gh/meeuw/rfxcmd_gc)
+
 DESCRIPTION
 
 RFXcmd is Python script that interfaces the RFX USB devices from RFXcom http://www.rfxcom.com.

@@ -855,6 +855,9 @@ def decodePacket(message):
     # 0x0 - Interface Control
     # ---------------------------------------
     if packettype == '00':
+        if id1 == 'FF':
+            serial_param.port.write('\x0e\x01\x00\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+            sys.exit(0)
         logger.debug("Decode packetType 0x" + str(packettype) + " - Start")
         decoded = True
     
